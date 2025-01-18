@@ -43,6 +43,12 @@ namespace CutomerRepository
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task AddCustomersAsync(IEnumerable<Customer> customers)
+        {
+            await _context.Customers.AddRangeAsync(customers); 
+            await _context.SaveChangesAsync();
+        }
     }
 
 }

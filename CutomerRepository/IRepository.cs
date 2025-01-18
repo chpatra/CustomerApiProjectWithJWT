@@ -9,6 +9,6 @@ namespace CutomerRepository
         Task Add(T entity); 
         Task Update(T entity); 
         Task Delete(int id);
-
+        Task AddCustomersAsync(IEnumerable<Customer> customers);
     }
 }
